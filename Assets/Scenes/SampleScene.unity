@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 353791665}
   - component: {fileID: 353791664}
   m_Layer: 5
-  m_Name: Money (2)
+  m_Name: 50000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 469272122}
   - component: {fileID: 469272121}
   m_Layer: 5
-  m_Name: Money (1)
+  m_Name: 30000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4499,7 +4499,7 @@ GameObject:
   - component: {fileID: 1460286958}
   - component: {fileID: 1460286957}
   m_Layer: 5
-  m_Name: Money
+  m_Name: 10000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
