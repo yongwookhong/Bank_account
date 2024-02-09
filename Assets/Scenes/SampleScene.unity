@@ -7525,7 +7525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   User:
     Name: "I'm \uC2E0\uB8B0\uC5D0\uC694~"
-    Balance: 2147483647
+    Balance: 51000000000000
     Cash: 150000
 --- !u!4 &1602689356
 Transform:

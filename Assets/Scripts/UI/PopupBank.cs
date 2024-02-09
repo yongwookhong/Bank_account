@@ -16,6 +16,24 @@ public class PopupBank : MonoBehaviour
         Refresh();
     }
 
+    public void Deposit(int money)
+    {
+        if (!GameManager.Instance.User.Deposit(money))
+        {
+            return;
+        }
+        Refresh();
+    }
+
+    public void Withdraw(int money)
+    {
+        if (!GameManager.Instance.User.Withdraw(money))
+        {
+            return;
+        }
+        Refresh();
+    }
+
     private void Refresh()
     {
         userName.text = GameManager.Instance.User.Name;

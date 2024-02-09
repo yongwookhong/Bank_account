@@ -8,16 +8,16 @@ public class UserData
 {
     public string Name;
     public long Balance;
-    public int Cash;
+    public long Cash;
 
-    public UserData(string name, long balance, int cash)
+    public UserData(string name, long balance, long cash)
     {
         Name = name;
         Balance = balance;
         Cash = cash;
     }
 
-    public bool Deposit (int money)
+    public bool Deposit (long money)
     {
         if (Cash < money)
             return false;
@@ -29,7 +29,7 @@ public class UserData
       
     }
 
-    public bool Withdraw(int money)
+    public bool Withdraw(long money)
     {
         if(Balance < money) return false;  
 
