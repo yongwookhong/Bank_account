@@ -24,6 +24,8 @@ public class PopupBank : MonoBehaviour
             PopupError.SetActive(true);
             return;
         }
+        GameManager.Instance.SaveUserData();
+
         Refresh();
     }
 
@@ -34,6 +36,8 @@ public class PopupBank : MonoBehaviour
             PopupError.SetActive(true);
             return;
         }
+
+        GameManager.Instance.SaveUserData();
         Refresh();
     }
 
@@ -53,4 +57,11 @@ public class PopupBank : MonoBehaviour
         balance.text = GameManager.Instance.User.Balance.ToString();
         cash.text = GameManager.Instance.User.Cash.ToString();
     }
+
+    // 숫자를 쉼표로 구분된 형식으로 변환하는 함수
+    private string FormatNumber(long number)
+    {
+        return string.Format("{0:#,##0}", number);
+    }
+
 }
