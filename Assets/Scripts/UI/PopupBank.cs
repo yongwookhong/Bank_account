@@ -14,6 +14,8 @@ public class PopupBank : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.LoadUserData("I'm ½Å·Ú¿¡¿ä~");
+
         Refresh();
     }
 

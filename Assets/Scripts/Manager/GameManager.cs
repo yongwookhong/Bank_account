@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        LoadUserData("I'm ½Å·Ú¿¡¿ä~");
+    }
+
     public void SaveUserData()
     {
         string data = JsonUtility.ToJson(User,true);
