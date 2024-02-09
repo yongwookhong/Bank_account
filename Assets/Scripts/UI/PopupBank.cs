@@ -10,25 +10,28 @@ public class PopupBank : MonoBehaviour
     [SerializeField] private TMP_Text userName;
     [SerializeField] private TMP_Text balance;
     [SerializeField] private TMP_Text cash;
+    [SerializeField] private GameObject PopupError;
 
     private void Start()
     {
         Refresh();
     }
 
-    public void Deposit(long money)
+    public void Deposit(int money)
     {
         if (!GameManager.Instance.User.Deposit(money))
         {
+            PopupError.SetActive(true);
             return;
         }
         Refresh();
     }
 
-    public void Withdraw(long money)
+    public void Withdraw(int money)
     {
         if (!GameManager.Instance.User.Withdraw(money))
         {
+            PopupError.SetActive(true);
             return;
         }
         Refresh();
@@ -36,12 +39,12 @@ public class PopupBank : MonoBehaviour
 
     public void CustomDeposit(TMP_InputField inputField)
     {
-        Deposit(long.Parse(inputField.text));
+        Deposit(int.Parse(inputField.text));
     }
 
     public void CustomWithdraw(TMP_InputField inputField)
     {
-        Withdraw(long.Parse(inputField.text));
+        Withdraw(int.Parse(inputField.text));
     }
 
     private void Refresh()

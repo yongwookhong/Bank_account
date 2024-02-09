@@ -490,6 +490,7 @@ MonoBehaviour:
   userName: {fileID: 667929349}
   balance: {fileID: 798510651}
   cash: {fileID: 767241609}
+  PopupError: {fileID: 215444364}
 --- !u!1 &145251432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,12 +1193,12 @@ GameObject:
   m_Component:
   - component: {fileID: 215444365}
   m_Layer: 5
-  m_Name: PopUpError
+  m_Name: PopupError
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &215444365
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2450,7 +2451,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 485690155}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 215444364}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &485690155
 MonoBehaviour:
   m_ObjectHideFlags: 0
