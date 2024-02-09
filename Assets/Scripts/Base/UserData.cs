@@ -7,10 +7,10 @@ using UnityEngine;
 public class UserData 
 {
     public string Name;
-    public int Balance;
+    public long Balance;
     public int Cash;
 
-    public UserData(string name, int balance, int cash)
+    public UserData(string name, long balance, int cash)
     {
         Name = name;
         Balance = balance;
@@ -23,7 +23,7 @@ public class UserData
             return false;
 
         Cash -= money;
-        Balance = money;
+        Balance += money;
 
         return true;
       
