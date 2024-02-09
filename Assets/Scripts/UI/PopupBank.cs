@@ -16,7 +16,7 @@ public class PopupBank : MonoBehaviour
         Refresh();
     }
 
-    public void Deposit(int money)
+    public void Deposit(long money)
     {
         if (!GameManager.Instance.User.Deposit(money))
         {
@@ -25,13 +25,23 @@ public class PopupBank : MonoBehaviour
         Refresh();
     }
 
-    public void Withdraw(int money)
+    public void Withdraw(long money)
     {
         if (!GameManager.Instance.User.Withdraw(money))
         {
             return;
         }
         Refresh();
+    }
+
+    public void CustomDeposit(TMP_InputField inputField)
+    {
+        Deposit(long.Parse(inputField.text));
+    }
+
+    public void CustomWithdraw(TMP_InputField inputField)
+    {
+        Withdraw(long.Parse(inputField.text));
     }
 
     private void Refresh()
